@@ -1,0 +1,346 @@
+
+
+body {
+   width: 100%;
+   height: 100vh;
+   display: grid;
+   align-items: center;
+   background-image: url("../images/rochelle.jpg");
+   }
+
+.titre h1 {
+   font-size: 100px;
+   text-shadow: -1px -1px rgb(1, 1, 1), 1px 1px rgb(0, 0, 0), -3px 0 4px #000;
+   font-family: fantasy;
+   color: #fffffffa;
+   padding: 40px 0 0 0;
+   margin: 10px auto;
+   margin-bottom: 10px;
+   font-weight: lighter;
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+   text-align: center;
+   display: block;
+   width: 80%;
+   height: min-content;
+   text-transform: uppercase;
+
+}
+
+.contact-in {
+   width: 80%;
+   height: 800px;
+   margin: auto;
+   display: flex;
+   flex-wrap: wrap;
+   padding: 10px;
+   border-radius: 10px;
+
+   text-transform: uppercase;
+   background: linear-gradient(to bottom right, rgb(249, 249, 250), rgb(67, 86, 138));
+   box-shadow: 0px 0px 10px 0px #666;
+
+}
+/* CSS DE LA MAP*/
+
+#map {
+   height: 800px;
+   width: 500px;
+   border: none;
+   margin-bottom: 0px;
+   border-radius: 50px;
+}
+ 
+
+
+.contact-form {
+   width: 100%;
+   height: auto;
+   flex: 50%;
+   text-align: center;
+   margin-bottom: 100px;
+
+}
+
+.contact-form h1 {
+   margin-bottom: 10px;
+}
+
+.contact-form-txt {
+   width: 100%;
+   height: 40px;
+   color: rgb(255, 255, 255);
+   border: none;
+   border-radius: 50px;
+   outline: none;
+   margin-bottom: 20px;
+   padding: 10px 0;
+   background: #8e2de2;
+   font-size: 50px;
+   text-transform: uppercase;
+
+}
+
+.contact-form-txt::placeholder {
+   color: #aaa;
+}
+
+.contact-form-textarea {
+   width: 95%;
+   height: 512px;
+   color: #000;
+   border: 3px solid #fafafa;
+   border-radius: 10px;
+   outline: none;
+   margin-bottom: 20px;
+   padding: 15px;
+   font-family: 'poppine', sans-serif;
+   font-size: small;
+}
+
+ 
+.contact-form p {
+   color: rgba(254, 254, 254, 0.961);
+  font-size: 25px;
+
+}
+
+.contact-form-btn {
+
+   width: 100%;
+   border: none;
+   outline: none;
+   border-radius: 50px;
+   background: #8e2de2;
+   text-transform: uppercase;
+   cursor: pointer;
+   padding: 10px 0;
+   font-size: 18px;
+
+}
+
+/* BUTTON DE SWITCH TOGGLE*/
+.switch {
+   display: inline-block;
+   position: relative;
+   width: 70px;
+   height: 40px;
+   cursor: pointer;
+   overflow: hidden;
+}
+
+.switch input {
+   position: absolute;
+   top: -30px;
+   left: -30px;
+   width: 0;
+   height: 0;
+}
+
+.switch input+span {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: #99b4df;
+   border-radius: 20px;
+}
+
+.switch input:checked+span {
+   background: #101011;
+}
+
+.switch input+span:before {
+   content: "";
+   display: inline-block;
+   position: absolute;
+   top: 50%;
+   left: 4px;
+   width: 32px;
+   height: 32px;
+   background: white;
+   border-radius: 50%;
+   transform: translateY(-50%);
+   transition: all .5s;
+}
+
+.switch input:checked+span:before {
+   left: 34px;
+}
+
+.transport {
+   text-transform: uppercase;
+}
+/*LISTE DE HEADER  */
+
+ 
+ ul{
+   margin: 30px;
+   padding:0;
+   display:flex;
+ }
+ 
+ ul li{
+   list-style:none;
+   margin:0 10px;
+   transition:0.5s;
+ }
+ 
+ ul li a{
+   display: block;
+   position:relative;
+   text-decoration:none;
+   padding:5px;
+   font-size:20px;
+   font-family: fantasy;
+   color:#fff;
+   text-transform:uppercase;
+   transition:0.5s;
+ }
+ 
+ ul:hover li a{
+   transform:scale(1.5);
+   opacity:0.2;
+   filter:blur(5px);
+ }
+ 
+ ul li a:hover{
+   transform:scale(2);
+   opacity:1;
+   filter:blur(0);
+   text-decoration:none;
+   color:#fff;
+ }
+ 
+ ul li a:before{
+   content:'';
+   position:absolute;
+   top:0;
+   left:0;
+   width: 100%;
+   height:100%;
+   background:#ff497c;
+   transition:0.5s;
+   transform-origin:right;
+   transform:scaleX(0);
+   z-index:-1;
+ }
+ 
+ ul li a:hover:before{
+   transition:transform 0.5s;
+   transform-origin:left;
+   transform:scaleX(1);
+ }
+ /*** button GEOLOCALISATION ******/
+ .buttonG {
+   align-items: center;
+   appearance: none;
+   background-clip: padding-box;
+   background-color: initial;
+   background-image: none;
+   border-style: none;
+   box-sizing: border-box;
+   color: #fff;
+   cursor: pointer;
+   display: inline-block;
+   flex-direction: row;
+   flex-shrink: 0;
+   font-family: sans-serif;
+   font-size: 20px;
+   font-weight: 800;
+   justify-content: center;
+   line-height: 24px;
+   margin: 0;
+   min-height: 64px;
+   outline: none;
+   overflow: visible;
+   padding: 19px 26px;
+   pointer-events: auto;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   text-transform: none;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   vertical-align: middle;
+   width: auto;
+   word-break: keep-all;
+   z-index: 0;
+ }
+ 
+ @media (min-width: 768px) {
+   .buttonG {
+     padding: 19px 32px;
+   }
+ }
+ 
+ .buttonG:before,
+ .buttonG:after {
+   border-radius: 80px;
+ }
+ 
+ .buttonG:before {
+   background-image: linear-gradient(92.83deg, #f3f3f3 0, #ebdbd7 100%);
+   content: "";
+   display: block;
+   height: 100%;
+   left: 0;
+   overflow: hidden;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   z-index: -2;
+ }
+ 
+ .buttonG:after {
+   background-color: initial;
+   background-image: linear-gradient(#1c1831 0, #0c0d0d 100%);
+   bottom: 4px;
+   content: "";
+   display: block;
+   left: 4px;
+   overflow: hidden;
+   position: absolute;
+   right: 4px;
+   top: 4px;
+   transition: all 100ms ease-out;
+   z-index: -1;
+ }
+ 
+ .buttonG:hover:not(:disabled):before {
+   background: linear-gradient(92.83deg, rgb(69, 118, 253) 0%, rgb(241, 241, 241) 100%);
+ }
+ 
+ .buttonG:hover:not(:disabled):after {
+   bottom: 0;
+   left: 0;
+   right: 0;
+   top: 0;
+   transition-timing-function: ease-in;
+   opacity: 0;
+ }
+ 
+ .buttonG:active:not(:disabled) {
+   color: #ccc;
+ }
+ 
+ .buttonG:active:not(:disabled):before {
+   background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+ }
+ 
+ .buttonG:active:not(:disabled):after {
+   background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+   bottom: 4px;
+   left: 4px;
+   right: 4px;
+   top: 4px;
+ }
+ 
+ .buttonG:disabled {
+   cursor: default;
+   opacity: .24;
+ }
+ /********************************/

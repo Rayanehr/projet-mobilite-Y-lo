@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- titre du document -->
+   <title>Mobilité alternative La Rochelle </title>
+   <!-- notre css  -->
+   <link href="css/style.css" rel="stylesheet" type="text/css" />
+   <!-- Importer la feuille de qui est hébergée par Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:ital,
+      wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;
+      1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <!-- css de leaflet -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <!-- script de leaflet -->
+   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+      <!-- notre script test.js-->
+   <script src="js/test.js" defer></script>
+   <!-- script de minification -->
+   <script src="js/axios.min.js"></script>
+   <div class="bg-image"></div>
+   <!--  header -->
+<div>
+    <nav>
+   <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://yelo.agglo-larochelle.fr/lignes-et-plans/"target="_blank">Services YELO</a></li>
+      <li><a href="team.html">TEAM</a></li>    
+   </ul>
+</nav>
+</div>
+ <!--fin header--> 
+</head>
+<body>
+      <div class="titre">
+      <h1>Mobilité LA ROCHELLE </h1>
+      </div>
+   <div class="contact-in">
+      
+      <div class="contact-map">
+<!-- div obligatoire pour la carte -->
+         <div id="map"></div>
+        
+      </div>
+      <div class="contact-form">
+         <h1>Selectionner une station</h1>
+         <form>
+            <!--list de mobilite disponible  -->
+            <ul id='list' style="list-style-type:  none ">
+               <li class=" transport">Vélo</li>
+               <label class="switch">
+                  <input type="checkbox" id="boutonVelo"/>
+                  <span></span>
+               </label>
+               <li class="transport">Bus</li>
+               <label class="switch">
+                  <input type="checkbox" id="boutonBus"/>
+                  <span></span>
+               </label>
+               <li class="transport">Train </li>
+               <label class="switch">
+                  <input type="checkbox" id="boutonGare"/>
+                  <span></span>
+               </label>
+         </form> 
+         <br>
+         <br> 
+            </ul>
+            <!-- Button Geolocalisation -->
+            <div class="contact-form">
+               <button class="buttonG" role="button" id="boutonGeolocaliser">GEOLOCALISATION</button>
+               <p class="contact-form-textarea" id="infos" >Test </p>
+            </div>      
+   </div>
+</body>     
+</html>
